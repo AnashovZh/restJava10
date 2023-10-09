@@ -7,20 +7,16 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.validator.constraints.Normalized;
+
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
-public class Student {
+public class Java10 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String firstName;
-    private int age;
-
-    public Student(Long id, String firstName, int age) {
-        this.id = id;
-        this.firstName = firstName;
-        this.age = age;
-    }
+    private String name;
+    private String address;
 }
